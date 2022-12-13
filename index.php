@@ -8,8 +8,9 @@ require("conexion.php");
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>TEMPERATURA Y HUMEDAD</title>
+        <link rel="stylesheet" href="css/estilo_graficas.css">
 
-		<style type="text/css">
+	<style type="text/css">
 .highcharts-figure,
 .highcharts-data-table table {
     min-width: 360px;
@@ -64,7 +65,7 @@ require("conexion.php");
 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
-       prueba de graficacion con base de datos registrador
+      <!-- prueba de graficacion con base de datos registrador -->
     </p>
 </figure>
 
@@ -86,8 +87,7 @@ Highcharts.chart('container', {
            // 'target="_blank">Wikipedia.com</a>'
     },
     xAxis: {
-        categories: [0,1,2,3,4,5,6,7,8,9,10
-        ]
+        categories: [0,1,2,3,4,5,6,7,8,9,10]
             
         
     },
@@ -113,18 +113,24 @@ Highcharts.chart('container', {
             while ($registros = mysqli_fetch_array($result))
             {
             ?>
-            '<?php echo $registros["datos"] ?>', 
+            '<?php echo $registros["id"] ?>', 
             <?php
             }
             ?>
             ]
     }, {
         name: 'Temperatura',
-        data: [ 12.2,12,13,14,16,17,18.66,12.2,12,13,14,16
+        data: [ 12.2,12,13,14,16,40,18.66,12.2,12,13,14,16
         ]
     }]
 });
 
+
+                    
+
 		</script>
+
+                    
+
 	</body>
 </html>

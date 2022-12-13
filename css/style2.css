@@ -1,0 +1,57 @@
+body {
+	background : #270909ed; 
+	Font-Family: Arial; 
+	Font-size: 10pt; 
+	Color: rgb(241, 179, 80);
+}
+
+
+h3 {
+	Font-Family: Arial; 
+	Font-size: l4pt; 
+	Color: orange; 
+}
+
+
+TABLE{ 
+	
+	border:1;
+	border-color: #0e0e0e; 
+	border-spacing: 1;
+}
+
+
+
+a:link { 
+	color: #2db631;
+	text-decoration: none; 
+}
+
+
+a:visited {
+	color: #0B55C4;
+	text-decoration: none; 
+
+}
+
+
+a:hover { 
+	COLOR: #FF00CC;
+	text-decoration: underline; 
+}
+
+.titulotabla {
+	Font-family:Verdana, Arial, Helvetica, sans-serif;
+	Font-size: 11pt;
+	font-weight : bold; 
+	background : #806699; 
+	color: #292424;
+	text-transform: uppercase;
+}
+ 
+.listado {
+	font-family :Arial, Helvetica ; 
+	background-color:#FFFFCC;
+	font-size: 10pt; 
+	color:#000000;
+}

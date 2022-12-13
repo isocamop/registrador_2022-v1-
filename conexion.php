@@ -1,3 +1,3 @@
 <?php
-    $connection = mysqli_connect("localhost","root","12345678","registrador");
+    $connection =  mysqli_connect("localhost","root","12345678","registrador");
 ?>

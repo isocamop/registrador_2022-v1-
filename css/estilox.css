@@ -1,0 +1,448 @@
+/*-------define estilo general---------- */
+body {   
+
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #ffffff; 
+	line-height: 1.5em;
+	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+	
+}
+.fondo{
+    background-image: url(../imagen/fondo8.jpg);
+    
+}
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+
+/* ------define estilo de la cabezera------- */
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 70px;
+}	
+	#main-header a {
+		color: rgb(0, 0, 0);
+	}
+#logo{
+    margin: 3px;
+    border-radius: 10px;
+}
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #ffffff; /* define color de logo*/
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: rgb(45, 45, 45);
+	}
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 40px;
+            
+            background-color: #03dd4f;
+            font-family: Arial, sans-serif;
+			float: left;
+            font-size: 18px;
+            margin: 15px;
+            border-radius: 20px;
+                
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+                
+			}
+			
+				nav ul li a:hover {
+					background: #5ff133;
+                    border-radius: 20px;
+				}
+/* ------------aplicando estilo al contenido---------- */                
+#titulo{     
+    width: 100%;
+    background-image: url(../imagen/fondo12.jpg);
+    font-size: 7.3em;
+	color:#ffffff;
+    font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin:  0 1.7em 0;
+    font-size: 1.8em;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+			
+
+
+
+/*define video */
+
+
+#fotopromo{
+	position: static;
+  	top: 5px;
+  	left: 5px;
+	  padding-top: 8px
+}
+
+#fotoPROMO{
+    display: inline-block;
+}
+.foto2{
+    border-radius: 30px;
+}
+#id-logo{
+	position: static;
+  	top: 3px;
+  	margin: 3px;
+   
+
+}
+/*define parafos*/
+
+
+#logo-wasa{
+
+	position: fixed;
+  	bottom: 60px;
+  	right: 0;
+  	width: 90px;
+  	/*border: 3px solid #73AD21;*/
+}
+
+
+
+
+	/* -----------define estilo de pie de pagina------------*/
+
+	#main-footer {
+		
+		background: rgb(21, 21, 26);
+		color: rgb(255, 255, 255);
+		text-align: center;
+		padding: 30px;
+		
+	}
+		#main-footer p {
+			margin: 0;
+            color: white;
+		}
+		
+		#main-footer a {
+			color: white;
+		}
+	
+
+	.en_pie{
+		margin-left: 100px;
+        text-align: center;
+	}
+/* ---------Para fijar  la cabecera -------*/
+
+#main-header {
+	background: rgba(68, 250, 165, 0.832);
+	color: rgb(0, 0, 0);
+	height: 80px;
+	
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */}
+
+
+section{
+	width: 100%;
+    background: #ffffff;
+    height: 100%;
+}
+#informacion{
+	width: 100%;
+    background: #a64cf060;
+    height: 100%;
+}
+#img{
+	float: left;
+	margin:30px;
+	width: 700px;
+	height: 400px;
+  }
+
+#img1{
+  float: left;
+  margin:40px;
+  width: 700px;
+}
+
+#img2{
+	float: right;
+	margin-right: 50px;
+	width: 650px;
+    margin-top: 50px;
+  }
+
+#titulo_1{
+    background-color: #b19c002b;
+    margin-right: 145px;
+    margin-left: 200px;
+}
+
+#titulo_2{
+    background-color: #0067b12b;
+    margin-right: 145px;
+    margin-left: 200px;
+}
+
+#titulo_3{
+    background-color: #00abb12b;
+    margin-right: 145px;
+    margin-left: 200px;
+}
+
+#titulo_4{
+    background-color: #e04d1c2b;
+    margin-right: 145px;
+    margin-left: 200px;
+}
+#titulo_5{
+    background: linear-gradient(70deg, rgba(11, 82, 214, 0.299), rgba(231, 181, 15, 0.23));
+
+    margin-right: 145px;
+    margin-left: 200px;
+}
+#titulo_6{
+    background: linear-gradient(70deg, rgba(11, 82, 214, 0.299), rgba(231, 87, 15, 0.23));
+    margin-right: 145px;
+    margin-left: 200px;
+}
+
+/* ---------Formulario -------*/
+/*
+#foto {
+	margin-left: 30px;
+	margin-top: 20px;
+	padding: 0;
+	width:100px;
+
+}
+*/	
+main{
+    width: 100%;
+    padding: 150px;
+    margin: auto;
+    
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera{
+    width: 100%;
+	height: 400px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 255, 17, 0.5);
+    border-radius: 60px;
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+	color: #000000;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.caja__trasera div p{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: rgb(0, 67, 14);
+    color: #fafafa;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    width: 400px;
+    padding: 70px 20px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+	border-radius: 30px;
+}
+
+
+.contenedor__login-register form h5{
+    margin: 0;
+    height: 40px;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid;
+    color: #000000;
+}
+.contenedor__login-register form #etiqueta{
+	font-size: 16px;
+}
+
+
+.contenedor__login-register form input{
+    width: 100%;
+    border: 1px solid #071500fa;
+    margin-bottom: 25px;
+    padding: 11px 10px;
+    background: #fbff87;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    border: none;
+    font-size: 16px;
+    background: #00b129;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    width: 100%;
+}
+
+.contenedor__login-register form button:hover{
+    background: rgb(101, 246, 85);
+    color:#fff
+}
+
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+}

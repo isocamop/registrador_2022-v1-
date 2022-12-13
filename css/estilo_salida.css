@@ -1,0 +1,13 @@
+body{
+    background-color:  #FFC300;
+    color:#5a5959;
+}
+#logo{   /* logo.jpg */      
+	position: absolute;
+	top: -6px;
+	left: 100px;
+	width: 120px;     
+	float: left;     
+	margin: 10px; 
+	border-radius: 0.8em;  
+}

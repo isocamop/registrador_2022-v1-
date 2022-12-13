@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(33, 16, 20, 0.815);
+}
+
+h1,h2,h3{
+    color:rgb(143, 231, 43)
+}
+
+#crea{
+    border-radius: 0.8em; 
+}
