@@ -1,7 +1,8 @@
 <?php
 $con = new mysqli("localhost","root","12345678","registrador");
 //verificar en caso de error......
-$sql = "select id, datos from historial where id_sensor in (91)";
+//$sql = "select id, datos from historial where id_sensor in (91)";
+$sql = "select id, cali from historialc where id and cali";
 $res = $con->query($sql);
 ?>
 
@@ -17,7 +18,7 @@ $res = $con->query($sql);
           ['id', 'CO2(ppm)'],
           <?php
           while($fila = $res->fetch_assoc()){
-            echo "['".$fila["id"]."',".$fila["datos"]."],";
+            echo "['".$fila["id"]."',".$fila["cali"]."],";
           }
           ?>
 //---------------- fin sentencia de datos ----------------------------------

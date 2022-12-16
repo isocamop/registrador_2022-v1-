@@ -9,16 +9,19 @@ body {
 h3 {
 	Font-Family: Arial; 
 	Font-size: l4pt; 
-	Color: orange; 
+	Color: rgb(81, 255, 0); 
 }
 
 
 TABLE{ 
 	
-	border:1;
-	border-color: #0e0e0e; 
-	border-spacing: 1;
+	border:3;
+	border-color: #0e0e0e70; 
+	border-spacing: 3;
+	
+	text-align: center;
 }
+
 
 
 
@@ -41,8 +44,9 @@ a:hover {
 }
 
 .titulotabla {
+
 	Font-family:Verdana, Arial, Helvetica, sans-serif;
-	Font-size: 11pt;
+	Font-size: 16pt;
 	font-weight : bold; 
 	background : #806699; 
 	color: #292424;

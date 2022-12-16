@@ -7,7 +7,7 @@ echo "<div align='center'> Paginación de Resultados para registro de Datos </di
 echo "<hr>";
 
     include("conexion2.php");
-    $res = mysqli_query($conexion, "SELECT * FROM historial");
+    $res = mysqli_query($conexion, "SELECT * FROM historialc");
     $numeroRegistros = mysqli_num_rows($res); 
     if($numeroRegistros<=0)
     {
@@ -47,27 +47,31 @@ echo "<hr>";
             } 
         }// fin de calculo
     // creacion de la consulta con límites
-    $sql = "SELECT * FROM historial ORDER BY ".$orden." ASC LIMIT ".$limitInf.",".$tamPag;
+    $sql = "SELECT * FROM historialc ORDER BY ".$orden." ASC LIMIT ".$limitInf.",".$tamPag;
     $res = mysqli_query($conexion, $sql); 
     echo "<div align='center'>";
     echo "<font face='verdana' size='-3'>Se encontraron ".$numeroRegistros." registros "; 
     echo "ordenados por <b>".$orden."</b>";
     echo "</font></div>";
-    echo "<TABLE border = 0  align='center' width='70%'>"; 
+    echo "<TABLE  border = 0  align='center' width='80%' >"; 
     echo "<tr><td colspan='6'><hr></td></tr>"; 
-    echo "<th>ID    </th>";
-    echo "<th>Datos    </th>"; 
-    echo "<th>Fecha  </th>"; 
-    echo "<th>ID_Sensor       </th>";
+    echo "<th>ID</th>";
+    echo "<th>Temperatura</th>"; 
+    echo "<th>Humedad</th>"; 
+    echo "<th>Radiacion</th>"; 
+    echo "<th>Calidad</th>"; 
+    echo "<th>Fecha y Hora</th>";
     while($registro = mysqli_fetch_array($res))
     {
 ?>
     <!--tabla de resultados-->
-<tr bgcolor="   #270909   " ('<?php echo "[".$registro["id"]."]".$registro["datos"]." - ".$registro["fecha"]; ?>');">
+<tr bgcolor="   #270909   " ('<?php echo "[".$registro["id"]."]".$registro["temp"]." - ".$registro["hume"]; ?>');">
 <td><?php echo $registro["id"]; ?> </td>
-<td><?php echo $registro["datos"]; ?> </td>
-<td><?php echo $registro["fecha"]; ?> </td>
-<TD><?php echo $registro["id_sensor"]; ?> </td></TD>
+<td><?php echo $registro["temp"]; ?> </td>
+<td><?php echo $registro["hume"]; ?> </td>
+<td><?php echo $registro["radi"]; ?> </td>
+<td><?php echo $registro["cali"]; ?> </td>
+<TD><?php echo $registro["fecha"]; ?> </td></TD>
 </tr>
     <!--fin  tabla resultados-->
 <?php

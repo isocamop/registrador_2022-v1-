@@ -1,7 +1,7 @@
 <?php
 $con = new mysqli("localhost","root","12345678","registrador");
 //verificar en caso de error......
-$sql = "select id, datos from historial where id_sensor in (1)";
+$sql = "select id, temp, hume, radi, cali from historialc";
 $res = $con->query($sql);
 ?>
 
@@ -14,10 +14,10 @@ $res = $con->query($sql);
 //---------------- ingreso de datos en tabla desde mysql por php------------
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['id', 'Humedad R(%)'],
+          ['id', 'Humedad R(%)', 'Temper.(°C)', 'Radiac.(W/m2)', 'CO2 (ppm)'],
           <?php
           while($fila = $res->fetch_assoc()){
-            echo "['".$fila["id"]."',".$fila["datos"]."],";
+            echo "['".$fila["id"]."',".$fila["temp"].",".$fila["hume"].",".$fila["radi"].",".$fila["cali"]."],";
           }
           ?>
 //---------------- fin sentencia de datos ----------------------------------
@@ -29,7 +29,7 @@ $res = $con->query($sql);
           vAxis: {minValue: 0}
         };
 
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>

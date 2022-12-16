@@ -24,10 +24,10 @@ while True:
     #convierte dato binario en scrip y luego a flotante para la base de datos
         # tomar en cuenta que solo se imprima desde arduino los valores de los datos
    
-    temperatura = float(dato[1].decode("utf-8")) 
+    temperatura = float(dato[0].decode("utf-8")) 
     
     #print(temperatura)
-    humedad = float(dato[0].decode("utf-8"))
+    humedad = float(dato[1].decode("utf-8"))
     #print(humedad)
     radiacion = float(dato[2].decode("utf-8"))
    
@@ -35,25 +35,26 @@ while True:
 
     # insertando los valores del puerto serial a la base de datos
     # ---------para temperatura --------
-    query = "INSERT historial (datos,fecha,id_sensor) VALUES (%s,now(),1)" % temperatura
+    query = "INSERT historialc (temp,hume,radi,cali,fecha) VALUES (%s, %s, %s, %s, now())" 
+    val = (temperatura, humedad, radiacion, calidad)
     print(query)
-    cur.execute(query)
+    cur.execute(query, val)
     miConexion.commit()
     # ---------para humedad --------
-    query = "INSERT historial (datos,fecha,id_sensor) VALUES (%s,now(),71)" % humedad
-    print(query)
-    cur.execute(query)
-    miConexion.commit()
+    #query = "INSERT historialc (hume,fecha,id_sensor) VALUES (%s,now(),71)" % humedad
+    #print(query)
+    #cur.execute(query)
+    #miConexion.commit()
      # ---------para radiacion solar --------
-    query = "INSERT historial (datos,fecha,id_sensor) VALUES (%s,now(),81)" % radiacion
-    print(query)
-    cur.execute(query)
-    miConexion.commit()
+    #query = "INSERT historialc (radi,fecha,id_sensor) VALUES (%s,now(),81)" % radiacion
+    #print(query)
+    #cur.execute(query)
+    #miConexion.commit()
     # ---------para calidad del aire --------
-    query = "INSERT historial (datos,fecha,id_sensor) VALUES (%s,now(),91)" % calidad
-    print(query)
-    cur.execute(query)
-    miConexion.commit()
+    #query = "INSERT historialc (cali,fecha,id_sensor) VALUES (%s,now(),91)" % calidad
+    #print(query)
+    #cur.execute(query)
+    #miConexion.commit()
 
 miConexion.close()
 arduino.close()

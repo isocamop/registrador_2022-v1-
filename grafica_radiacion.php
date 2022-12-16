@@ -1,7 +1,8 @@
 <?php
 $con = new mysqli("localhost","root","12345678","registrador");
 //verificar en caso de error......
-$sql = "select id, datos from historial where id_sensor in (81)";
+//$sql = "select id, datos from historial where id_sensor in (81)"; //para una columna de datos
+$sql = "select id, radi from historialc where id and radi"; //para columnas independientes
 $res = $con->query($sql);
 ?>
 
@@ -17,7 +18,7 @@ $res = $con->query($sql);
           ['id', 'Radicion(W/m2)'],
           <?php
           while($fila = $res->fetch_assoc()){
-            echo "['".$fila["id"]."',".$fila["datos"]."],";
+            echo "['".$fila["id"]."',".$fila["radi"]."],";
           }
           ?>
 //---------------- fin sentencia de datos ----------------------------------

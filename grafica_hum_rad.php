@@ -1,8 +1,8 @@
 <?php
 $con = new mysqli("localhost","root","12345678","registrador");
 //verificar en caso de error......
-//$sql = "select id, datos from historial where id_sensor in (1)"; //datos en una columna
-$sql = "select id, hume from historialc where id and hume"; //datos en columnas dsitintas
+//$sql = "select id, datos from historial where id_sensor in (1,71)";
+$sql = "select id, hume, radi from historialc where id and hume and radi";
 $res = $con->query($sql);
 ?>
 
@@ -15,17 +15,17 @@ $res = $con->query($sql);
 //---------------- ingreso de datos en tabla desde mysql por php------------
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['id', 'Humedad R(%)'],
+          ['id', 'Humedad R(%)', 'Radiac.(W/m2)'],
           <?php
           while($fila = $res->fetch_assoc()){
-            echo "['".$fila["id"]."',".$fila["hume"]."],";
+            echo "['".$fila["id"]."',".$fila["hume"].",".$fila["radi"]."],";
           }
           ?>
 //---------------- fin sentencia de datos ----------------------------------
         ]);
 
         var options = {
-          title: 'Grafica de humedad relativa',
+          title: 'Grafica de Humedad relativa VS Temperatura',
           hAxis: {title: 'tiempo',  titleTextStyle: {color: '#333'}},
           vAxis: {minValue: 0}
         };

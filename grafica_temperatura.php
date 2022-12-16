@@ -1,7 +1,8 @@
 <?php
 $con = new mysqli("localhost","root","12345678","registrador");
 //verificar en caso de error......
-$sql = "select id, datos from historial where id_sensor in (71)";
+//$sql = "select id, datos from historial where id_sensor in (71)"; // para selc datos en una columna
+$sql = "select id, temp from historialc where id and temp"; //para datos en columnas distintas
 $res = $con->query($sql);
 ?>
 
@@ -17,7 +18,7 @@ $res = $con->query($sql);
           ['id', 'Temperatura(°C)'],
           <?php
           while($fila = $res->fetch_assoc()){
-            echo "['".$fila["id"]."',".$fila["datos"]."],";
+            echo "['".$fila["id"]."',".$fila["temp"]."],";
           }
           ?>
 //---------------- fin sentencia de datos ----------------------------------
@@ -26,12 +27,17 @@ $res = $con->query($sql);
         var options = {
           title: 'Grafica de temperatura',
           hAxis: {title: 'tiempo',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          vAxis: {minValue: 0},
+
+          
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
+
+        
       }
+       
     </script>
   </head>
   <body>
